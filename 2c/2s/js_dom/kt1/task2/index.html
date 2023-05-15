@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>kt1_2</title>
+	</head>
+	<body>
+		<script>
+			let arr = [];
+			let cell_number = 0;
+			for (let i = 0; i < 30; i++) {
+  				arr[i] = Math.floor(Math.random() * 100); 
+			}
+			//console.log(`${arr}`);
+			let table = document.createElement("TABLE");
+			table.setAttribute("id", "myTable");
+			document.body.appendChild(table);
+			for (let i = 0; i < 5; i++) {
+				let row = document.createElement("TR");
+				row.setAttribute("id", `row${i}`);
+  				document.getElementById("myTable").appendChild(row);
+				for (let j = 0; j < 6; j++) {
+					let cell = document.createElement("TD");
+					let arr_id = 6 * i + j;
+					cell.setAttribute("id", `cell${arr_id}`);
+  					document.getElementById(`row${i}`).appendChild(cell);
+				}
+			}
+			function AddNumber() {
+				let target_cell = document.getElementById(`cell${cell_number}`)
+				let cell_data = document.createTextNode(arr[cell_number]);
+				if (arr[cell_number] >= 50) {
+					target_cell.setAttribute("bgcolor", "orange")
+				}
+				//target_cell.appendChild(cell_data);
+				target_cell.innerText = arr[cell_number];
+				cell_number++;
+				if (cell_number > 29) {
+					cell_number = 0;
+				}
+				//console.log(`${cell_number}`);
+			}
+
+		</script>
+		<button onclick="AddNumber()">Добавить число</button>
+	</body>
+</html>
