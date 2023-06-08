@@ -1,0 +1,352 @@
+.background-image-header {
+    background-image: url(images/fgfg-min.jpg);
+}
+
+.background-size-cover {
+    background-size: cover;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-basis-100 {
+    flex-basis: 100%;
+}
+
+.height-900px {
+    height: 900px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.background-position-0-35 {
+    background-position:  0% 35%;
+}
+
+.width-867 {
+    width: 867px; 
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.letter-spacing-normal {
+    letter-spacing: normal;
+}
+
+.font-size-3-75 {
+    font-size: 3.75rem;
+}
+
+.color-white {
+    color: white;
+}
+
+.padding-top-6em {
+    padding-top: 6em;
+}
+
+.padding-bottom-1em {
+    padding-bottom: 1em;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.min-height-254px {
+    min-height: 254px;
+}
+
+.width-160px {
+    width: 160px;
+}
+
+.margin-20px {
+    margin: 20px;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.margin-top-0 {
+    margin-top: 0;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.margin-right-auto {
+    margin-right: auto;
+}
+
+.font-style-italic {
+    font-style: italic;
+}
+
+.margin-top-20px {
+    margin-top: 20px;
+}
+
+.margin-right-0 {
+    margin-right: 0;
+}
+
+.margin-left-0 {
+    margin-left: 0;
+}
+
+.font-size-0-875rem {
+    font-size: 0.875rem;
+}
+
+.letter-spacing-2px {
+    letter-spacing: 2px;
+}
+
+.text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.border-radius-50px {
+    border-radius: 50px;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.background-color-myorange {
+    background-color:  #CC812C;
+}
+
+.height-40px {
+    height: 40px;
+}
+
+.margin-top-40px {
+    margin-top: 40px;
+}
+
+.width-150px {
+    width: 150px;
+}
+
+.margin-top-60px {
+    margin-top: 60px;
+}
+
+.display-grid {
+    display: grid;
+}
+
+.grid-template-rows-400px {
+    grid-template-rows: 400px;
+}
+
+.grid-template-columns-666-444 {
+    grid-template-columns: 666px 444px;
+}
+
+.max-width-1140px {
+    max-width: 1140px;
+}
+
+.grid-gap-30px {
+    grid-gap: 30px;
+}
+
+.margin-30px {
+    margin: 30px;
+}
+
+.grid-template-rows-300px {
+    grid-template-rows: 300px;
+}
+
+.grid-template-columns-333-777 {
+    grid-template-columns: 333px 777px;
+}
+
+.background-image-pine {
+    background-image: url(images/98697f8a5035ec93bad682b65a13f41c.jpeg);
+}
+
+.background-position-0-65 {
+    background-position:  0% 65%;
+}
+
+.grid-column-start-1 {
+    grid-column-start: 1;
+}
+
+.grid-column-end-1 {
+    grid-column-end: 1;
+}
+
+.grid-row-start-1 {
+    grid-row-start: 1;
+}
+
+.grid-row-end-1 {
+    grid-row-end: 1;
+}
+
+.background-color-white-grey {
+    background-color:  #F2F2F2;
+}
+
+.grid-column-start-2 {
+    grid-column-start: 2;
+}
+
+.grid-column-end-2 {
+    grid-column-end: 2;
+}
+
+.padding-top-20px {
+    padding-top: 20px;
+}
+
+.padding-right-40px {
+    padding-right: 40px;
+}
+
+.padding-bottom-20px {
+    padding-bottom: 20px;
+}
+
+.padding-left-40px {
+    padding-left: 40px;
+}
+
+.align-items-start {
+    align-items: start;
+}
+
+.padding-top-30px {
+    padding-top: 30px;
+
+}
+
+.padding-right-20px {
+    padding-right: 20px;
+}
+
+.padding-bottom-10px {
+    padding-bottom: 10px;
+}
+
+.padding-left-10px {
+    padding-left: 10px;
+}
+
+.border-1px-solid-myorange {
+    border: 1px solid #CC812C
+}
+
+.background-image-man {
+    background-image: url(images/2fa540df7187a7eeb5f596f9d0726e2d.jpeg);
+}
+
+.border-bottom-6px-solid-myorange {
+    border-bottom: 6px solid #CC812C;
+}
+
+.height-15px {
+    height: 15px;
+}
+
+.width-80px {
+    width: 80px;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.font-size-1-25 {
+    font-size: 1.25rem; 
+}
+
+.margin-top-47px {
+    margin-top: 47px; 
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-size-1-875 {
+    font-size: 1.875rem;
+}
+
+.line-height-1-4 {
+    line-height: 1.4;
+}
+
+.margin-top-60px {
+    margin-top: 60px;
+}
+
+.margin-right-10px {
+    margin-right: 10px;
+}
+
+.margin-left-50px {
+    margin-left: 50px;
+}
+
+.font-size-10 {
+    font-size: 10rem;
+}
+
+.width-90px {
+    width: 90px;
+}
+
+.height-90px {
+    height: 90px;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.color-lightgrey {
+    color:lightgrey;
+}
