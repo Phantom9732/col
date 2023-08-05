@@ -1,0 +1,22 @@
+.slider {
+    border-radius: 5px;
+    background: #E0E0E0;
+    width: 310px;
+    height: 15px;
+    margin: 5px;
+  }
+  
+  .thumb {
+    width: 10px;
+    height: 25px;
+    border-radius: 3px;
+    position: relative;
+    top: -5px;
+    background: red;
+  }
+
+.position {
+    background: lightgoldenrodyellow;
+    width: max-content;
+    height: auto;
+}
