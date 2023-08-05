@@ -27,6 +27,7 @@ thumb.onmousedown = function(event) {
     let postext = document.createTextNode(prettypos);
     firstch = ppos.firstChild;
     ppos.replaceChild(postext, firstch);
+    ppos.style.left = newLeft + 5 + 'px';
 
   }
 
