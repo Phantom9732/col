@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="glob" class="glob">
+        <div id="formdiv" class="formdiv">
+            <form name="cardinfo" class="cardinfo">
+                <select name="inbank" name="Название банка">
+                    <option disabled selected value> -- Выберите банк -- </option>
+                    <option>Сбербанк</option>
+                    <option>Альфабанк</option>
+                    <option>Тинькофф</option>
+                    <option>Газпромбанк</option>
+                    <option>ВТБ</option>
+                </select>
+                <select name="inissuer" name="Тип платежной системы">
+                    <option disabled selected value> -- Выберите платежную систему -- </option>
+                    <option>Мир</option>
+                    <option>Visa</option>
+                    <option>MasterCard</option>
+                </select>
+                <input type="text" name="innumber" placeholder="Номер карты">
+                <input type="text" name="incardholder" placeholder="Имя держателя карты">
+                <input type="text" name="invalid" placeholder="Срок действия">
+                <button type="submit">Отправить</button>
+            
+            </form>
+        </div>
+        <div id="carddiv" class="carddiv">
+            <div id="logo" class="logo">            </div>
+            <div id="number" class="number"></div>
+            <div class="third">
+                <div id="cardholder" class="cardholder">&nbsp</div>
+                <div id="valid" class="valid">&nbsp</div>
+                <div id="pslogo" class="pslogo">&nbsp</div>
+            </div>
+        </div>
+    </div>
+    <div id="tablediv">
+        <table id="ctable" class="ctable">
+            <tbody>
+                <tr class="headerrow">
+                    <th class="headercell">Название банка</th>
+                    <th class="headercell">Тип платежной системы</th>
+                    <th class="headercell">Номер карты</th>
+                    <th class="headercell">Имя держателя карты</th>
+                    <th class="headercell">Срок действия карты</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
