@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+  <form id="input-form">
+    <label for="message">Enter Message:</label>
+    <input type="text" id="message" name="message"><br><br>
+    <input type="submit" value="Send">
+  </form>
+  <div id="messages"></div>
+  <script>
+    var action
+    const webSocket = new WebSocket('ws://localhost:8080/');
+    webSocket.onmessage = function (event) {
+      console.log(event)
+      console.log("action = " + action)
+      const jsonMessage = JSON.parse(event.data);
+      if (jsonMessage.action) {
+         action = jsonMessage.action
+      }
+      if (jsonMessage.action != 'SaveFile') {
+        document.getElementById('messages').innerHTML += 
+          '   ' + jsonMessage.data + "<br>";
+        } else {
+          //file = jsonMessage.data
+          var image = new Image();
+          image.src = jsonMessage.data
+          document.body.appendChild(image);
+        }
+    };
+    webSocket.addEventListener("open", () => {
+      console.log("We are connected");
+    });
+    function sendMessage(event) {
+      var inputMessage = document.getElementById('message')
+      //webSocket.send(inputMessage.value)
+      webSocket.send(JSON.stringify({action: action, data: inputMessage.value}))
+      inputMessage.value = ""
+      event.preventDefault();
+    }
+    document.getElementById('input-form').addEventListener('submit', sendMessage);
+  </script>
+</body>
+</html>
