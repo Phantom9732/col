@@ -1,0 +1,20 @@
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#supported-api {
+    margin: 20px;
+}
+
+#supported-api ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#supported-api li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
