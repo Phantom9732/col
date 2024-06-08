@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Exhibition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Cat Exhibition</h1>
+        <p>Discover the most beautiful and unique cats from around the world!</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#section1">About</a></li>
+            <li><a href="#section2">Gallery</a></li>
+            <li><a href="#section3">Events</a></li>
+            <li><a href="#section4">Contact</a></li>
+            <li><a href="#video">Watch Video</a></li>
+            <li><a href="#audio">Listen Audio</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <h2>About the Exhibition</h2>
+            <p>Welcome to the annual Cat Exhibition where cat lovers from all over the world gather to celebrate and admire these wonderful creatures.</p>
+        </section>
+
+        <section id="section2">
+            <h2>Gallery</h2>
+            <div class="grid-container">
+                <div class="grid-item"><img src="images/cat1.jpg" alt="Cat 1"></div>
+                <div class="grid-item"><img src="images/cat2.jpg" alt="Cat 2"></div>
+                <div class="grid-item"><img src="images/cat3.jpg" alt="Cat 3"></div>
+            </div>
+        </section>
+
+        <section id="section3">
+            <h2>Upcoming Events</h2>
+            <p>Don't miss our upcoming events!</p>
+            <ul>
+                <li>Cat Show - July 20th</li>
+                <li>Cat Adoption Day - August 15th</li>
+                <li>Cat Health Seminar - September 10th</li>
+            </ul>
+        </section>
+
+        <section id="section4">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h2 id="video">Watch this video!</h2>
+        <video controls>
+            <source src="videos/cat-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h2 id="audio">Listen to a cat meow!</h2>
+        <audio controls>
+            <source src="audio/cat-meow.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 Cat Exhibition. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
