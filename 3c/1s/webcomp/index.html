@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments Component</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    comment-element {
+      --comment-bg-color: #e0f7fa;
+      --comment-border-color: #00796b;
+      --comment-text-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <h1>Comments Section</h1>
+  <div id="comments-section"></div>
+
+  <template id="comment-template">
+    <style>
+      :host {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid var(--comment-border-color, #ccc);
+        border-radius: 5px;
+        background-color: var(--comment-bg-color, #f9f9f9);
+        color: var(--comment-text-color, #000);
+      }
+      .comment {
+        margin-bottom: 10px;
+      }
+      .actions {
+        margin-top: 10px;
+      }
+      .nested-comments {
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div class="comment">
+      <strong class="author"><slot name="author"></slot></strong>
+      <p class="text"><slot name="text"></slot></p>
+    </div>
+    <div class="actions">
+      <button class="reply">Reply</button>
+      <button class="delete">Delete</button>
+    </div>
+    <div class="nested-comments"></div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
