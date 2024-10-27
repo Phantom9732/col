@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.range {
+  display: grid;
+  grid-template-columns: 1fr 7rem 7rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.discout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.sorted {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

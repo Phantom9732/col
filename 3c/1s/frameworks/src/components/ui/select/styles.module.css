@@ -1,0 +1,65 @@
+.container {
+  position: relative;
+  min-width: 12.5rem;
+  border: 0.063rem solid var(--border-gray);
+  border-radius: 0.375rem;
+  width: max-content;
+  cursor: pointer;
+  user-select: none;
+}
+
+.label {
+  padding: 0.5rem 1.625rem 0.5rem 1rem;
+  color: var(--black);
+  font-weight: 500;
+  position: relative;
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  translate: 0 -50%;
+  transition: rotate 100ms;
+}
+
+.dropdown {
+  background-color: var(--white);
+  padding: 1rem;
+  border: 0.063rem solid var(--border-gray);
+  border-radius: 0.375rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: grid;
+  opacity: 0;
+  pointer-events: none;
+  gap: 0.25rem;
+  transition: opacity 300ms;
+}
+
+.item {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 500;
+  transition: color 300ms;
+}
+
+.item:hover {
+  color: var(--black);
+}
+
+.selected {
+  color: var(--black);
+}
+
+.open .dropdown {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.open .chevron {
+  rotate: 180deg;
+}

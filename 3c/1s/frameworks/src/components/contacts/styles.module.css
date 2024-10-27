@@ -1,0 +1,46 @@
+.wrapper {
+  padding: 1.875rem 2.5rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: var(--grid-maincol-size) 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.item {
+  padding: 1.875rem;
+  background-color: var(--light-gray);
+  border-radius: 0.75rem;
+}
+
+.label {
+  font-size: 1.25rem;
+  color: var(--gray);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.description {
+  font-size: 2.5rem;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.socials {
+  display: flex;
+  gap: 1.125rem;
+}
+
+.socials img {
+  width: 2.625rem;
+  height: 2.625rem;
+}
+
+.map {
+  width: 100%;
+}
+
+.map iframe {
+  border: none;
+}

@@ -1,0 +1,57 @@
+.button {
+  font-family: 'Montserrat', sans-serif;
+  min-width: 13.125rem;
+  padding: 1rem;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid var(--green);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.button:hover {
+  background-color: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+
+.black {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.white {
+  background-color: var(--white);
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.full {
+  width: 100%;
+}
+
+.borderless {
+  border: none;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.done {
+  background-color: var(--light-gray);
+  color: var(--green);
+  border-color: var(--light-gray);
+}
+
+.inactive {
+  pointer-events: none;
+}
+
+.noEvents {
+  pointer-events: none;
+}

@@ -1,0 +1,20 @@
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+
+  --white: #fff;
+  --black: #282828;
+  --green: #339933;
+  --border-gray: #dddddd;
+  --light-gray: #f1f3f4;
+  --gray: #8b8b8b;
+  --grid-maincol-size: 58%;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-wrap: nowrap;
+}

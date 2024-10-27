@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+}
+
+.input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  min-width: 0;
+  border-radius: 0.375rem;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 1rem 2rem;
+  border: 1px solid var(--border-gray);
+  outline: none;
+}
+
+.input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gray);
+}
+
+.input::selection {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.transparent {
+  background-color: transparent;
+  color: var(--white);
+  border-color: --white;
+}
+
+.transparent::placeholder {
+  color: var(--border-gray);
+}
+
+.error {
+  border-color: rgb(221, 121, 121);
+  outline: 1px solid rgb(221, 121, 121);
+}
+
+.errorMessage {
+  color: rgb(221, 121, 121);
+  padding: 0.125rem;
+  padding-top: 0.25rem;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.mini {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}

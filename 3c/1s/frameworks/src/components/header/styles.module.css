@@ -1,0 +1,65 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  padding: 1.875rem 2.5rem;
+  align-items: center;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.logo {
+  height: 4.375rem;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.cart {
+  height: 3rem;
+  justify-self: flex-end;
+  position: relative;
+}
+
+.cart img {
+  height: 100%;
+}
+
+.counter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  translate: 0 25%;
+  background-color: var(--green);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-item {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--black);
+  transition: color 300ms;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-item:global(.active) {
+  color: var(--green);
+}
+
+.menu-item:hover {
+  color: var(--green);
+}

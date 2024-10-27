@@ -1,0 +1,61 @@
+.wrapper {
+  padding: 1.875rem 2.5rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: var(--grid-maincol-size) 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.items {
+  display: grid;
+  gap: 1rem;
+}
+
+.form {
+  padding: 2rem;
+  background-color: var(--light-gray);
+  border-radius: 0.75rem;
+  align-self: flex-start;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.total-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.items-count,
+.total {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.total-price {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.inputs {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.empty-description {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}

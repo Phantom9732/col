@@ -1,0 +1,35 @@
+.container {
+  padding: 2rem;
+  padding-bottom: 0;
+  background: linear-gradient(261.47deg, #0b710b 32.63%, #339933 98.96%);
+  border-radius: 0.75rem;
+}
+
+.heading {
+  font-size: 4rem;
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: var(--grid-maincol-size) 1fr;
+}
+
+.image {
+  min-width: 0;
+  width: 100%;
+  align-self: flex-end;
+}
+.form {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.button {
+  padding-top: 1rem;
+  width: 100%;
+}
