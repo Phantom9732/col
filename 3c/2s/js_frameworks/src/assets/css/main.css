@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-weight: 400;
+  scroll-behavior: smooth;
+
+  --font-abel: 'Abel', sans-serif;
+  --font-abeezee: 'ABeeZee', serif;
+}
