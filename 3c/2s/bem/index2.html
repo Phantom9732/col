@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выставка комнатных растений</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__nav">
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item"><a href="#gallery" class="header__menu-link">Растения</a></li>
+                    <li class="header__menu-item"><a href="#info" class="header__menu-link">Информация</a></li>
+                    <li class="header__menu-item"><a href="#contact" class="header__menu-link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__content">
+            <h1 class="header__title">Добро пожаловать на выставку комнатных растений</h1>
+            <p class="header__subtitle">Откройте для себя мир прекрасных растений</p>
+            <button class="header__button">Купить билеты</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Галерея -->
+        <section class="gallery" id="gallery">
+            <h2 class="gallery__title">Наши растения</h2>
+            <div class="gallery__grid">
+                <div class="gallery__item">
+                    <img src="img/fikus.jpg" alt="Фикус" class="gallery__image">
+                    <p class="gallery__caption">Фикус</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="img/aloe.jpg" alt="Алоэ вера" class="gallery__image">
+                    <p class="gallery__caption">Алоэ вера</p>
+                </div>
+                <!-- Добавьте другие растения по необходимости -->
+            </div>
+        </section>
+
+        <!-- Информация -->
+        <section class="info" id="info">
+            <h2 class="info__title">Информация о выставке</h2>
+            <p class="info__text">Дата проведения: 10-15 октября 2023 года</p>
+            <p class="info__text">Место проведения: Ботанический сад</p>
+            <p class="info__text">Свяжитесь с нами по телефону: +7 (123) 456-78-90</p>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <p class="footer__text">© 2023 Выставка комнатных растений</p>
+        <p class="footer__text">Email: info@plants-expo.ru</p>
+    </footer>
+</body>
+</html>
