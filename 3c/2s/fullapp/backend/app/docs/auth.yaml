@@ -1,0 +1,27 @@
+# backend/app/docs/auth.yaml
+Login:
+  post:
+    tags:
+      - Аутентификация
+    summary: Вход в систему
+    parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            username:
+              type: string
+            password:
+              type: string
+    responses:
+      200:
+        description: Успешная авторизация
+        schema:
+          type: object
+          properties:
+            access_token:
+              type: string
+            user:
+              type: object

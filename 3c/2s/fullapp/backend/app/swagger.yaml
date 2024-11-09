@@ -1,0 +1,303 @@
+# swagger.yaml
+swagger: "2.0"
+info:
+  title: Pet Shop API
+  version: 1.0.0
+  description: API для магазина товаров для животных
+
+basePath: /api
+
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: 'JWT Authorization header using the Bearer scheme. Example: "Bearer {token}"'
+
+paths:
+  /auth/register:
+    post:
+      tags:
+        - Аутентификация
+      summary: Регистрация нового пользователя
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              email:
+                type: string
+              password:
+                type: string
+      responses:
+        201:
+          description: Пользователь успешно зарегистрирован
+        400:
+          description: Ошибка валидации
+
+  /auth/login:
+    post:
+      summary: Вход в систему
+      tags:
+        - Аутентификация
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+      responses:
+        200:
+          description: Успешная авторизация
+          schema:
+            type: object
+            properties:
+              access_token:
+                type: string
+              user:
+                type: object
+
+  /auth/me:
+    get:
+      summary: Получение информации о текущем пользователе
+      tags:
+        - Аутентификация
+      security:
+        - Bearer: []
+      responses:
+        200:
+          description: Информация о пользователе
+        401:
+          description: Не авторизован
+
+  /products:
+    get:
+      summary: Получение списка товаров
+      tags:
+        - Товары
+      parameters:
+        - in: query
+          name: page
+          type: integer
+        - in: query
+          name: category_id
+          type: integer
+      responses:
+        200:
+          description: Список товаров
+
+    post:
+      summary: Создание нового товара
+      tags:
+        - Товары
+      security:
+        - Bearer: []
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              price:
+                type: number
+              stock:
+                type: integer
+              category_id:
+                type: integer
+              image_url:
+                type: string
+      responses:
+        201:
+          description: Товар создан
+        401:
+          description: Не авторизован
+        403:
+          description: Нет прав администратора
+
+  /products/{product_id}:
+    delete:
+      tags:
+        - Товары
+      summary: Удаление товара
+      parameters:
+        - name: product_id
+          in: path
+          required: true
+          type: integer
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+      responses:
+        204:
+          description: Товар успешно удален
+        400:
+          description: Ошибка при удалении (товар в заказах)
+        401:
+          description: Не авторизован
+        403:
+          description: Нет прав администратора
+        500:
+          description: Внутренняя ошибка сервера
+
+  /categories:
+    get:
+      summary: Получение списка категорий
+      tags:
+        - Категории
+      responses:
+        200:
+          description: Список категорий
+
+    post:
+      summary: Создание новой категории
+      tags:
+        - Категории
+      security:
+        - Bearer: []
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              image_url:
+                type: string
+      responses:
+        201:
+          description: Категория создана
+        403:
+          description: Нет прав администратора
+
+  /cart:
+    get:
+      summary: Получение корзины пользователя
+      tags:
+        - Корзина
+      security:
+        - Bearer: []
+      responses:
+        200:
+          description: Корзина пользователя
+
+  /cart/add:
+    post:
+      summary: Добавление товара в корзину
+      tags:
+        - Корзина
+      security:
+        - Bearer: []
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              product_id:
+                type: integer
+              quantity:
+                type: integer
+      responses:
+        201:
+          description: Товар добавлен в корзину
+
+  /cart/update/{item_id}:
+    put:
+      summary: Обновление количества товара в корзине
+      tags:
+        - Корзина
+      security:
+        - Bearer: []
+      parameters:
+        - in: path
+          name: item_id
+          required: true
+          type: integer
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              quantity:
+                type: integer
+      responses:
+        200:
+          description: Количество обновлено
+
+  /orders:
+    get:
+      summary: Получение списка заказов
+      tags:
+        - Заказы
+      security:
+        - Bearer: []
+      responses:
+        200:
+          description: Список заказов
+
+    post:
+      summary: Создание заказа
+      tags:
+        - Заказы
+      security:
+        - Bearer: []
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              shipping_address:
+                type: string
+      responses:
+        201:
+          description: Заказ создан
+
+  /orders/{order_id}/status:
+    put:
+      summary: Обновление статуса заказа
+      tags:
+        - Заказы
+      security:
+        - Bearer: []
+      parameters:
+        - in: path
+          name: order_id
+          required: true
+          type: integer
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                enum: [pending, processing, shipped, delivered, cancelled]
+      responses:
+        200:
+          description: Статус обновлен
+        403:
+          description: Нет прав администратора
