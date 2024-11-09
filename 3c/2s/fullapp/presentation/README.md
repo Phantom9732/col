@@ -354,7 +354,7 @@ Database:
 - Product -> OrderItems (1:N)
 - Order -> OrderItems (1:N)
 #### Диаграмма
-[![ER Diagramm](/img/db_diagramm.png "Диаграмма")]
+[![ER Diagramm](https://github.com/Phantom9732/col/blob/main/3c/2s/fullapp/presentation/img/db_diagramm.png?raw=true "Диаграмма")]
 ## Установка
 ### Требования
 - Python 3.8+
